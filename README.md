@@ -21,12 +21,14 @@ python main.py [C1, C2, ...]
 ## Example
 
 ```
-python main.py 2 3 4 5`
+python main.py 2 3 4 5
 ```
 
 ![](loops.png)
 
 ## Derivation
+
+> The derivation of equations is based on [1]. Scipy's default non-linear ODE solver is used instead of Euler's method.
 
 The loop shape is computed so that the centripetal force `a_c` stays constant along the track segment:
 
@@ -97,6 +99,6 @@ f(s, Z) = (C / (v_0 ** 2 / g - 2 * Z[2]), cos(Z[0]), sin(Z[1]))
 
 We use this expression to integrate the system of ODEs using [`scipy.integrate.ode`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.ode.html). The final results are dislayed using `matplotlib`.
 
-## Credits
+## Bibliography
 
-System of equations provided by [The Real Physics Of A Roller Coaster](https://www.youtube.com/watch?v=4q2W5SJc5j4), published 2019-05-09, Art of Engineering.
+[1]: Art of Engineering, [The Real Physics Of A Roller Coaster](https://www.youtube.com/watch?v=4q2W5SJc5j4), published 2019-05-09.
