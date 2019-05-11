@@ -1,6 +1,6 @@
 # Roller coaster loops
 
-Compute the shape of roller coaster loops.
+Applying calculus to real-world physics to compute the shape of a roller coaster loop.
 
 ## Requirements
 
@@ -98,6 +98,12 @@ f(s, Z) = (C / (v_0 ** 2 / g - 2 * Z[2]), cos(Z[0]), sin(Z[1]))
 ```
 
 We use this expression to integrate the system of ODEs using [`scipy.integrate.ode`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.ode.html). The final results are dislayed using `matplotlib`.
+
+## Future work
+
+- [ ] Improve the CLI experience (hint: use [Click](https://click.palletsprojects.com/)).
+- [ ] Plot G against `s`: `G = v ** 2 / (r * g) + cos(Θ)`.
+- [ ] Add other scenarios, e.g. circular loop, triangular/trapezoid centripetal accelaration, etc.
 
 ## Bibliography
 
